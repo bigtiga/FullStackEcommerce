@@ -6,17 +6,25 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --import=tsx --watch --env-file=.env src/index.ts",
-    "build": "tsc --outDir dist"
+    "build": "tsc --outDir dist",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@genezio/types": "^1.0.19",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1"
+    "drizzle-orm": "^0.34.1",
+    "express": "^4.21.1",
+    "pg": "^8.13.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.25.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3"
